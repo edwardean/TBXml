@@ -9,7 +9,15 @@
 #import "test.h"
 
 @implementation test
-@synthesize dic,caption,des,icon,pop;
+@synthesize ID,dic,caption,des,icon,pop;
+- (void) setID:(NSString *)I {
+    if (ID!=I) {
+        [ID release];
+        ID = [I copy];
+        NSLog(@"id:%@",ID);
+        
+    }
+}
 - (void) setDes:(NSString *)d{
     if (des!=d) {
         [des release];

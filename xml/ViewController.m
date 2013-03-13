@@ -21,7 +21,7 @@
         while (coupon!=nil) {
             
             test *obj = [[test alloc] init];
-            obj.id = [TBXML valueOfAttributeNamed:@"id" forElement:coupon];
+            obj.ID = [TBXML valueOfAttributeNamed:@"id" forElement:coupon];
             obj.caption = [TBXML valueOfAttributeNamed:@"caption" forElement:coupon];
             obj.des = [TBXML valueOfAttributeNamed:@"description" forElement:coupon];
             obj.icon = [TBXML valueOfAttributeNamed:@"icon" forElement:coupon];
