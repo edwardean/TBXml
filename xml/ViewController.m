@@ -19,8 +19,7 @@
     if (root) {
         TBXMLElement *coupon = [TBXML childElementNamed:@"coupon" parentElement:root];
         while (coupon!=nil) {
-            
-            test *obj = [[test alloc] init];
+            test *obj = [[[test alloc] init] autorelease];
             obj.ID = [TBXML valueOfAttributeNamed:@"id" forElement:coupon];
             obj.caption = [TBXML valueOfAttributeNamed:@"caption" forElement:coupon];
             obj.des = [TBXML valueOfAttributeNamed:@"description" forElement:coupon];
@@ -29,7 +28,8 @@
             coupon = [TBXML nextSiblingNamed:@"coupon" searchFromElement:coupon];
         }
     }
-  
+    [tb release];
+    [tb release];
 }
 - (void)viewDidLoad
 {
