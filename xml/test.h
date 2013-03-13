@@ -10,7 +10,6 @@
 
 @interface test : NSObject
 
-@property (nonatomic, retain) NSDictionary *dic;
 @property (nonatomic, copy) NSString *ID;
 @property (nonatomic, copy) NSString *caption;
 @property (nonatomic, copy) NSString *des;
